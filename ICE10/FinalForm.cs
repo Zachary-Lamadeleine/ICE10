@@ -69,5 +69,19 @@ namespace ICE10
             TextBox_TOU.Text = (Convert.ToInt32(TextBox_STR.Text) + Convert.ToInt32(TextBox_VGR.Text)).ToString();
             TextBox_RES.Text = (Convert.ToInt32(TextBox_INT.Text) + Convert.ToInt32(TextBox_WIL.Text)).ToString();
         }
+
+        private void Save_Button_Click(object sender, EventArgs e)
+        {
+            var dialog = new SaveFileDialog();
+            dialog.Title = "Save Character";
+            dialog.Filter = "Character Files (*.chr)|*.chr|All Files (*.*)|*.*";
+            dialog.InitialDirectory = Program.DownloadsFolder;
+            dialog.FileName = Settings.Default.CharacterName + ".chr";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                Program.SaveCharacter(dialog.FileName);
+                Program.ShowToast("Character Saved!");
+            }
+        }
     }
 }

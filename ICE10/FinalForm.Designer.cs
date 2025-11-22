@@ -58,6 +58,7 @@
             Label_Career = new Label();
             Label_Species = new Label();
             TextBox_Species = new TextBox();
+            Save_Button = new Button();
             Panel_CoreAttributes.SuspendLayout();
             Panel_SecondaryAttributes.SuspendLayout();
             SuspendLayout();
@@ -65,9 +66,10 @@
             // Button_Back
             // 
             Button_Back.Font = new Font("Calibri", 12F);
-            Button_Back.Location = new Point(41, 524);
+            Button_Back.Location = new Point(22, 246);
+            Button_Back.Margin = new Padding(2, 1, 2, 1);
             Button_Back.Name = "Button_Back";
-            Button_Back.Size = new Size(170, 70);
+            Button_Back.Size = new Size(92, 33);
             Button_Back.TabIndex = 3;
             Button_Back.Text = "Back";
             Button_Back.UseVisualStyleBackColor = true;
@@ -76,9 +78,10 @@
             // Button_About
             // 
             Button_About.Font = new Font("Calibri", 12F);
-            Button_About.Location = new Point(855, 524);
+            Button_About.Location = new Point(460, 246);
+            Button_About.Margin = new Padding(2, 1, 2, 1);
             Button_About.Name = "Button_About";
-            Button_About.Size = new Size(170, 70);
+            Button_About.Size = new Size(92, 33);
             Button_About.TabIndex = 4;
             Button_About.Text = "About";
             Button_About.UseVisualStyleBackColor = true;
@@ -100,17 +103,19 @@
             Panel_CoreAttributes.Controls.Add(TextBox_AGL);
             Panel_CoreAttributes.Controls.Add(Label_INT);
             Panel_CoreAttributes.Controls.Add(Label_WIL);
-            Panel_CoreAttributes.Location = new Point(41, 157);
+            Panel_CoreAttributes.Location = new Point(22, 74);
+            Panel_CoreAttributes.Margin = new Padding(2, 1, 2, 1);
             Panel_CoreAttributes.Name = "Panel_CoreAttributes";
-            Panel_CoreAttributes.Size = new Size(599, 171);
+            Panel_CoreAttributes.Size = new Size(323, 81);
             Panel_CoreAttributes.TabIndex = 45;
             // 
             // label1
             // 
             label1.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            label1.Location = new Point(22, 1);
+            label1.Location = new Point(12, 0);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(244, 44);
+            label1.Size = new Size(131, 21);
             label1.TabIndex = 32;
             label1.Text = "Core Attributes";
             // 
@@ -119,10 +124,11 @@
             TextBox_WIL.BackColor = SystemColors.Window;
             TextBox_WIL.BorderStyle = BorderStyle.FixedSingle;
             TextBox_WIL.Font = new Font("Calibri", 12F);
-            TextBox_WIL.Location = new Point(497, 97);
+            TextBox_WIL.Location = new Point(268, 45);
+            TextBox_WIL.Margin = new Padding(2, 1, 2, 1);
             TextBox_WIL.Name = "TextBox_WIL";
             TextBox_WIL.ReadOnly = true;
-            TextBox_WIL.Size = new Size(79, 47);
+            TextBox_WIL.Size = new Size(43, 27);
             TextBox_WIL.TabIndex = 23;
             TextBox_WIL.TextAlign = HorizontalAlignment.Center;
             // 
@@ -131,19 +137,21 @@
             TextBox_INT.BackColor = SystemColors.Window;
             TextBox_INT.BorderStyle = BorderStyle.FixedSingle;
             TextBox_INT.Font = new Font("Calibri", 12F);
-            TextBox_INT.Location = new Point(402, 97);
+            TextBox_INT.Location = new Point(216, 45);
+            TextBox_INT.Margin = new Padding(2, 1, 2, 1);
             TextBox_INT.Name = "TextBox_INT";
             TextBox_INT.ReadOnly = true;
-            TextBox_INT.Size = new Size(79, 47);
+            TextBox_INT.Size = new Size(43, 27);
             TextBox_INT.TabIndex = 22;
             TextBox_INT.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_AGL
             // 
             Label_AGL.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_AGL.Location = new Point(22, 55);
+            Label_AGL.Location = new Point(12, 26);
+            Label_AGL.Margin = new Padding(2, 0, 2, 0);
             Label_AGL.Name = "Label_AGL";
-            Label_AGL.Size = new Size(79, 39);
+            Label_AGL.Size = new Size(43, 18);
             Label_AGL.TabIndex = 12;
             Label_AGL.Text = "AGL";
             Label_AGL.TextAlign = ContentAlignment.TopCenter;
@@ -153,19 +161,21 @@
             TextBox_PER.BackColor = SystemColors.Window;
             TextBox_PER.BorderStyle = BorderStyle.FixedSingle;
             TextBox_PER.Font = new Font("Calibri", 12F);
-            TextBox_PER.Location = new Point(307, 97);
+            TextBox_PER.Location = new Point(165, 45);
+            TextBox_PER.Margin = new Padding(2, 1, 2, 1);
             TextBox_PER.Name = "TextBox_PER";
             TextBox_PER.ReadOnly = true;
-            TextBox_PER.Size = new Size(79, 47);
+            TextBox_PER.Size = new Size(43, 27);
             TextBox_PER.TabIndex = 21;
             TextBox_PER.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_STR
             // 
             Label_STR.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_STR.Location = new Point(117, 55);
+            Label_STR.Location = new Point(63, 26);
+            Label_STR.Margin = new Padding(2, 0, 2, 0);
             Label_STR.Name = "Label_STR";
-            Label_STR.Size = new Size(79, 39);
+            Label_STR.Size = new Size(43, 18);
             Label_STR.TabIndex = 13;
             Label_STR.Text = "STR";
             Label_STR.TextAlign = ContentAlignment.TopCenter;
@@ -175,19 +185,21 @@
             TextBox_VGR.BackColor = SystemColors.Window;
             TextBox_VGR.BorderStyle = BorderStyle.FixedSingle;
             TextBox_VGR.Font = new Font("Calibri", 12F);
-            TextBox_VGR.Location = new Point(212, 97);
+            TextBox_VGR.Location = new Point(114, 45);
+            TextBox_VGR.Margin = new Padding(2, 1, 2, 1);
             TextBox_VGR.Name = "TextBox_VGR";
             TextBox_VGR.ReadOnly = true;
-            TextBox_VGR.Size = new Size(79, 47);
+            TextBox_VGR.Size = new Size(43, 27);
             TextBox_VGR.TabIndex = 20;
             TextBox_VGR.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_VGR
             // 
             Label_VGR.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_VGR.Location = new Point(212, 55);
+            Label_VGR.Location = new Point(114, 26);
+            Label_VGR.Margin = new Padding(2, 0, 2, 0);
             Label_VGR.Name = "Label_VGR";
-            Label_VGR.Size = new Size(79, 39);
+            Label_VGR.Size = new Size(43, 18);
             Label_VGR.TabIndex = 14;
             Label_VGR.Text = "VGR";
             Label_VGR.TextAlign = ContentAlignment.TopCenter;
@@ -197,19 +209,21 @@
             TextBox_STR.BackColor = SystemColors.Window;
             TextBox_STR.BorderStyle = BorderStyle.FixedSingle;
             TextBox_STR.Font = new Font("Calibri", 12F);
-            TextBox_STR.Location = new Point(117, 97);
+            TextBox_STR.Location = new Point(63, 45);
+            TextBox_STR.Margin = new Padding(2, 1, 2, 1);
             TextBox_STR.Name = "TextBox_STR";
             TextBox_STR.ReadOnly = true;
-            TextBox_STR.Size = new Size(79, 47);
+            TextBox_STR.Size = new Size(43, 27);
             TextBox_STR.TabIndex = 19;
             TextBox_STR.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_PER
             // 
             Label_PER.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_PER.Location = new Point(307, 55);
+            Label_PER.Location = new Point(165, 26);
+            Label_PER.Margin = new Padding(2, 0, 2, 0);
             Label_PER.Name = "Label_PER";
-            Label_PER.Size = new Size(79, 39);
+            Label_PER.Size = new Size(43, 18);
             Label_PER.TabIndex = 15;
             Label_PER.Text = "PER";
             Label_PER.TextAlign = ContentAlignment.TopCenter;
@@ -219,19 +233,21 @@
             TextBox_AGL.BackColor = SystemColors.Window;
             TextBox_AGL.BorderStyle = BorderStyle.FixedSingle;
             TextBox_AGL.Font = new Font("Calibri", 12F);
-            TextBox_AGL.Location = new Point(22, 97);
+            TextBox_AGL.Location = new Point(12, 45);
+            TextBox_AGL.Margin = new Padding(2, 1, 2, 1);
             TextBox_AGL.Name = "TextBox_AGL";
             TextBox_AGL.ReadOnly = true;
-            TextBox_AGL.Size = new Size(79, 47);
+            TextBox_AGL.Size = new Size(43, 27);
             TextBox_AGL.TabIndex = 18;
             TextBox_AGL.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_INT
             // 
             Label_INT.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_INT.Location = new Point(402, 55);
+            Label_INT.Location = new Point(216, 26);
+            Label_INT.Margin = new Padding(2, 0, 2, 0);
             Label_INT.Name = "Label_INT";
-            Label_INT.Size = new Size(79, 39);
+            Label_INT.Size = new Size(43, 18);
             Label_INT.TabIndex = 16;
             Label_INT.Text = "INT";
             Label_INT.TextAlign = ContentAlignment.TopCenter;
@@ -239,9 +255,10 @@
             // Label_WIL
             // 
             Label_WIL.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_WIL.Location = new Point(497, 55);
+            Label_WIL.Location = new Point(268, 26);
+            Label_WIL.Margin = new Padding(2, 0, 2, 0);
             Label_WIL.Name = "Label_WIL";
-            Label_WIL.Size = new Size(79, 39);
+            Label_WIL.Size = new Size(43, 18);
             Label_WIL.TabIndex = 17;
             Label_WIL.Text = "WIL";
             Label_WIL.TextAlign = ContentAlignment.TopCenter;
@@ -256,17 +273,19 @@
             Panel_SecondaryAttributes.Controls.Add(Label_RES);
             Panel_SecondaryAttributes.Controls.Add(Label_TOU);
             Panel_SecondaryAttributes.Controls.Add(Label_AWA);
-            Panel_SecondaryAttributes.Location = new Point(670, 157);
+            Panel_SecondaryAttributes.Location = new Point(361, 74);
+            Panel_SecondaryAttributes.Margin = new Padding(2, 1, 2, 1);
             Panel_SecondaryAttributes.Name = "Panel_SecondaryAttributes";
-            Panel_SecondaryAttributes.Size = new Size(355, 171);
+            Panel_SecondaryAttributes.Size = new Size(192, 81);
             Panel_SecondaryAttributes.TabIndex = 46;
             // 
             // Label_SecondaryAttributes
             // 
             Label_SecondaryAttributes.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_SecondaryAttributes.Location = new Point(23, 9);
+            Label_SecondaryAttributes.Location = new Point(12, 4);
+            Label_SecondaryAttributes.Margin = new Padding(2, 0, 2, 0);
             Label_SecondaryAttributes.Name = "Label_SecondaryAttributes";
-            Label_SecondaryAttributes.Size = new Size(305, 44);
+            Label_SecondaryAttributes.Size = new Size(164, 21);
             Label_SecondaryAttributes.TabIndex = 33;
             Label_SecondaryAttributes.Text = "Secondary Attributes";
             // 
@@ -275,10 +294,11 @@
             TextBox_RES.BackColor = SystemColors.Window;
             TextBox_RES.BorderStyle = BorderStyle.FixedSingle;
             TextBox_RES.Font = new Font("Calibri", 12F);
-            TextBox_RES.Location = new Point(212, 106);
+            TextBox_RES.Location = new Point(114, 50);
+            TextBox_RES.Margin = new Padding(2, 1, 2, 1);
             TextBox_RES.Name = "TextBox_RES";
             TextBox_RES.ReadOnly = true;
-            TextBox_RES.Size = new Size(79, 47);
+            TextBox_RES.Size = new Size(43, 27);
             TextBox_RES.TabIndex = 29;
             TextBox_RES.TextAlign = HorizontalAlignment.Center;
             // 
@@ -287,10 +307,11 @@
             TextBox_TOU.BackColor = SystemColors.Window;
             TextBox_TOU.BorderStyle = BorderStyle.FixedSingle;
             TextBox_TOU.Font = new Font("Calibri", 12F);
-            TextBox_TOU.Location = new Point(117, 106);
+            TextBox_TOU.Location = new Point(63, 50);
+            TextBox_TOU.Margin = new Padding(2, 1, 2, 1);
             TextBox_TOU.Name = "TextBox_TOU";
             TextBox_TOU.ReadOnly = true;
-            TextBox_TOU.Size = new Size(79, 47);
+            TextBox_TOU.Size = new Size(43, 27);
             TextBox_TOU.TabIndex = 28;
             TextBox_TOU.TextAlign = HorizontalAlignment.Center;
             // 
@@ -299,19 +320,21 @@
             TextBox_AWA.BackColor = SystemColors.Window;
             TextBox_AWA.BorderStyle = BorderStyle.FixedSingle;
             TextBox_AWA.Font = new Font("Calibri", 12F);
-            TextBox_AWA.Location = new Point(22, 106);
+            TextBox_AWA.Location = new Point(12, 50);
+            TextBox_AWA.Margin = new Padding(2, 1, 2, 1);
             TextBox_AWA.Name = "TextBox_AWA";
             TextBox_AWA.ReadOnly = true;
-            TextBox_AWA.Size = new Size(79, 47);
+            TextBox_AWA.Size = new Size(43, 27);
             TextBox_AWA.TabIndex = 27;
             TextBox_AWA.TextAlign = HorizontalAlignment.Center;
             // 
             // Label_RES
             // 
             Label_RES.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_RES.Location = new Point(212, 64);
+            Label_RES.Location = new Point(114, 30);
+            Label_RES.Margin = new Padding(2, 0, 2, 0);
             Label_RES.Name = "Label_RES";
-            Label_RES.Size = new Size(79, 39);
+            Label_RES.Size = new Size(43, 18);
             Label_RES.TabIndex = 26;
             Label_RES.Text = "RES";
             Label_RES.TextAlign = ContentAlignment.TopCenter;
@@ -319,9 +342,10 @@
             // Label_TOU
             // 
             Label_TOU.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_TOU.Location = new Point(117, 64);
+            Label_TOU.Location = new Point(63, 30);
+            Label_TOU.Margin = new Padding(2, 0, 2, 0);
             Label_TOU.Name = "Label_TOU";
-            Label_TOU.Size = new Size(79, 39);
+            Label_TOU.Size = new Size(43, 18);
             Label_TOU.TabIndex = 25;
             Label_TOU.Text = "TOU";
             Label_TOU.TextAlign = ContentAlignment.TopCenter;
@@ -329,9 +353,10 @@
             // Label_AWA
             // 
             Label_AWA.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_AWA.Location = new Point(20, 64);
+            Label_AWA.Location = new Point(11, 30);
+            Label_AWA.Margin = new Padding(2, 0, 2, 0);
             Label_AWA.Name = "Label_AWA";
-            Label_AWA.Size = new Size(89, 39);
+            Label_AWA.Size = new Size(48, 18);
             Label_AWA.TabIndex = 24;
             Label_AWA.Text = "AWA";
             Label_AWA.TextAlign = ContentAlignment.TopCenter;
@@ -341,18 +366,20 @@
             TextBox_Name.BackColor = SystemColors.Window;
             TextBox_Name.BorderStyle = BorderStyle.FixedSingle;
             TextBox_Name.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TextBox_Name.Location = new Point(41, 79);
+            TextBox_Name.Location = new Point(22, 37);
+            TextBox_Name.Margin = new Padding(2, 1, 2, 1);
             TextBox_Name.Name = "TextBox_Name";
             TextBox_Name.ReadOnly = true;
-            TextBox_Name.Size = new Size(360, 47);
+            TextBox_Name.Size = new Size(195, 27);
             TextBox_Name.TabIndex = 51;
             // 
             // Label_Name
             // 
             Label_Name.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_Name.Location = new Point(41, 22);
+            Label_Name.Location = new Point(22, 10);
+            Label_Name.Margin = new Padding(2, 0, 2, 0);
             Label_Name.Name = "Label_Name";
-            Label_Name.Size = new Size(244, 44);
+            Label_Name.Size = new Size(131, 21);
             Label_Name.TabIndex = 33;
             Label_Name.Text = "Character Name";
             // 
@@ -361,27 +388,30 @@
             TextBox_Career.BackColor = SystemColors.Window;
             TextBox_Career.BorderStyle = BorderStyle.FixedSingle;
             TextBox_Career.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TextBox_Career.Location = new Point(469, 79);
+            TextBox_Career.Location = new Point(253, 37);
+            TextBox_Career.Margin = new Padding(2, 1, 2, 1);
             TextBox_Career.Name = "TextBox_Career";
             TextBox_Career.ReadOnly = true;
-            TextBox_Career.Size = new Size(244, 47);
+            TextBox_Career.Size = new Size(132, 27);
             TextBox_Career.TabIndex = 52;
             // 
             // Label_Career
             // 
             Label_Career.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_Career.Location = new Point(469, 22);
+            Label_Career.Location = new Point(253, 10);
+            Label_Career.Margin = new Padding(2, 0, 2, 0);
             Label_Career.Name = "Label_Career";
-            Label_Career.Size = new Size(244, 44);
+            Label_Career.Size = new Size(131, 21);
             Label_Career.TabIndex = 53;
             Label_Career.Text = "Career";
             // 
             // Label_Species
             // 
             Label_Species.Font = new Font("Calibri", 12F, FontStyle.Bold);
-            Label_Species.Location = new Point(781, 22);
+            Label_Species.Location = new Point(421, 10);
+            Label_Species.Margin = new Padding(2, 0, 2, 0);
             Label_Species.Name = "Label_Species";
-            Label_Species.Size = new Size(244, 44);
+            Label_Species.Size = new Size(131, 21);
             Label_Species.TabIndex = 55;
             Label_Species.Text = "Species";
             // 
@@ -390,17 +420,32 @@
             TextBox_Species.BackColor = SystemColors.Window;
             TextBox_Species.BorderStyle = BorderStyle.FixedSingle;
             TextBox_Species.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            TextBox_Species.Location = new Point(781, 79);
+            TextBox_Species.Location = new Point(421, 37);
+            TextBox_Species.Margin = new Padding(2, 1, 2, 1);
             TextBox_Species.Name = "TextBox_Species";
             TextBox_Species.ReadOnly = true;
-            TextBox_Species.Size = new Size(244, 47);
+            TextBox_Species.Size = new Size(132, 27);
             TextBox_Species.TabIndex = 54;
+            // 
+            // Save_Button
+            // 
+            Save_Button.BackColor = Color.FromArgb(128, 255, 128);
+            Save_Button.Font = new Font("Calibri", 12F);
+            Save_Button.Location = new Point(239, 246);
+            Save_Button.Margin = new Padding(2, 1, 2, 1);
+            Save_Button.Name = "Save_Button";
+            Save_Button.Size = new Size(92, 33);
+            Save_Button.TabIndex = 56;
+            Save_Button.Text = "Save";
+            Save_Button.UseVisualStyleBackColor = false;
+            Save_Button.Click += Save_Button_Click;
             // 
             // FinalForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1074, 629);
+            ClientSize = new Size(578, 295);
+            Controls.Add(Save_Button);
             Controls.Add(Label_Species);
             Controls.Add(TextBox_Species);
             Controls.Add(Label_Career);
@@ -412,6 +457,7 @@
             Controls.Add(Button_About);
             Controls.Add(Button_Back);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2, 1, 2, 1);
             MaximizeBox = false;
             Name = "FinalForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -459,5 +505,6 @@
         private Label Label_Career;
         private Label Label_Species;
         private TextBox TextBox_Species;
+        private Button Save_Button;
     }
 }
