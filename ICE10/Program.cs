@@ -4,9 +4,11 @@ namespace ICE10
     {
         Splash,
         Start,
+        Selection,
         Next,
         Final,
         About
+        
     }
 
     public enum ToastType
@@ -22,6 +24,8 @@ namespace ICE10
     {
         // Declaring Form Variables
         public static SplashForm SplashForm;
+        public static ToastForm ToastForm;
+        public static StartForm StartForm;
         public static SelectionForm SelectionForm;
         public static NextForm NextForm;
         public static FinalForm FinalForm;
@@ -33,6 +37,8 @@ namespace ICE10
         // Declaring a bool that will help us exit
         public static bool IsExiting = false;
 
+        public static bool HasLoadedCharacter { get; internal set; }
+        public static string DownloadsFolder { get; internal set; }
 
         [STAThread]
         static void Main()
@@ -42,6 +48,8 @@ namespace ICE10
             // Initializing the Form Variables
             // by instantiating objects of the related form types
             SplashForm = new SplashForm();
+            ToastForm = new ToastForm();
+            StartForm = new StartForm();
             SelectionForm = new SelectionForm();
             NextForm = new NextForm();
             FinalForm = new FinalForm();
@@ -51,6 +59,7 @@ namespace ICE10
             Forms =
             [
                 SplashForm,
+                StartForm,
                 SelectionForm,
                 NextForm,
                 FinalForm,
@@ -93,7 +102,7 @@ namespace ICE10
             writer.WriteLine(Settings.Default.Career);
         }
 
-        public static void LoadCharacter(string path)
+        public static bool LoadCharacter(string path)
         {
             try
             {
@@ -144,18 +153,22 @@ namespace ICE10
                 Settings.Default.CharacterName = CharacterName;
                 Settings.Default.Species = Species;
                 Settings.Default.Career = Career;
+                return false;
             }
             catch (FileNotFoundException e)
             {
                 ShowToast("File Not Found: " + e.Message, ToastType.Danger);
+                return false;
             }
             catch (FileFormatException e)
             {
                 ShowToast("Format Error: " + e.Message, ToastType.Danger);
+                return false;
             }
             catch (Exception e)
             {
                 ShowToast("Error: " + e.Message, ToastType.Danger);
+                return false;
             }
         }
         public static void ShowToast(string message, ToastType type = ToastType.Success)

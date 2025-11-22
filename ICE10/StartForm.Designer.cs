@@ -82,6 +82,7 @@
             Controls.Add(LoadCharacter);
             Controls.Add(NewCharacter);
             Name = "StartForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "StartForm";
             ResumeLayout(false);
         }
