@@ -37,38 +37,10 @@ namespace ICE10
         // Declaring a bool that will help us exit
         public static bool IsExiting = false;
 
-        public static bool HasLoadedCharacter { get; internal set; }
-        public static string DownloadsFolder { get; internal set; }
+        public static bool HasLoadedCharacter = false;
+        public static string DownloadsFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), "Downloads");
 
-        [STAThread]
-        static void Main()
-        {
-            ApplicationConfiguration.Initialize();
-
-            // Initializing the Form Variables
-            // by instantiating objects of the related form types
-            SplashForm = new SplashForm();
-            ToastForm = new ToastForm();
-            StartForm = new StartForm();
-            SelectionForm = new SelectionForm();
-            NextForm = new NextForm();
-            FinalForm = new FinalForm();
-            AboutForm = new AboutForm();
-
-            // Initializing the Forms List
-            Forms =
-            [
-                SplashForm,
-                StartForm,
-                SelectionForm,
-                NextForm,
-                FinalForm,
-                AboutForm
-            ];
-
-            Application.Run(SplashForm);
-        }
-
+       
         public static void ConfirmExit(FormClosingEventArgs e)
         {
             if (IsExiting)
@@ -127,6 +99,7 @@ namespace ICE10
                 }
 
                 using StreamReader reader = new StreamReader(path);
+
                 var AGL = reader.ReadLine();
                 var STR = reader.ReadLine();
                 var VGR = reader.ReadLine();
@@ -137,9 +110,8 @@ namespace ICE10
                 var Species = reader.ReadLine();
                 var Career = reader.ReadLine();
 
-                if (AGL == null || STR == null || VGR == null
-                 || PER == null || INT == null || WIL == null ||
-          CharacterName == null || Species == null || Career == null)
+                if (AGL == null || STR == null || VGR == null || PER == null || INT == null || WIL == null ||
+                CharacterName == null || Species == null || Career == null)
                 {
                     throw new FileFormatException("Invalid Character file");
                 }
@@ -153,8 +125,9 @@ namespace ICE10
                 Settings.Default.CharacterName = CharacterName;
                 Settings.Default.Species = Species;
                 Settings.Default.Career = Career;
-                return false;
+                return true;
             }
+
             catch (FileNotFoundException e)
             {
                 ShowToast("File Not Found: " + e.Message, ToastType.Danger);
@@ -185,6 +158,35 @@ namespace ICE10
             toast.TopMost = true;
             toast.Show(Form.ActiveForm);
         }
+        [STAThread]
+        static void Main()
+        {
+            ApplicationConfiguration.Initialize();
+
+            // Initializing the Form Variables
+            // by instantiating objects of the related form types
+            SplashForm = new SplashForm();
+            ToastForm = new ToastForm();
+            StartForm = new StartForm();
+            SelectionForm = new SelectionForm();
+            NextForm = new NextForm();
+            FinalForm = new FinalForm();
+            AboutForm = new AboutForm();
+
+            // Initializing the Forms List
+            Forms =
+            [
+                SplashForm,
+                StartForm,
+                SelectionForm,
+                NextForm,
+                FinalForm,
+                AboutForm
+            ];
+
+            Application.Run(SplashForm);
+        }
+
 
     }
 }
