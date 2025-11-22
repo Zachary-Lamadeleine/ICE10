@@ -28,7 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            Label_Message = new Label();
+            ToastTimer = new System.Windows.Forms.Timer(components);
             SuspendLayout();
+            // 
+            // Label_Message
+            // 
+            Label_Message.AutoSize = true;
+            Label_Message.Font = new Font("Calibri", 14.25F, FontStyle.Bold);
+            Label_Message.Location = new Point(10, 30);
+            Label_Message.Margin = new Padding(5, 0, 5, 0);
+            Label_Message.Name = "Label_Message";
+            Label_Message.Size = new Size(120, 23);
+            Label_Message.TabIndex = 0;
+            Label_Message.Text = "Your Message";
+            // 
+            // ToastTimer
+            // 
+            ToastTimer.Interval = 1500;
+            ToastTimer.Tick += ToastTimer_Tick;
             // 
             // ToastForm
             // 
@@ -39,6 +58,7 @@
             BackColor = Color.FromArgb(192, 255, 192);
             ClientSize = new Size(700, 100);
             ControlBox = false;
+            Controls.Add(Label_Message);
             Font = new Font("Calibri", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(6, 5, 6, 5);
@@ -49,9 +69,14 @@
             StartPosition = FormStartPosition.Manual;
             Text = "ToastForm";
             TopMost = true;
+            Shown += ToastForm_Shown;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label Label_Message;
+        private System.Windows.Forms.Timer ToastTimer;
     }
 }
