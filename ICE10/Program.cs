@@ -79,6 +79,19 @@ namespace ICE10
             }
         }
 
+        public static void SaveCharacter(string path)
+        {
+            using StreamWriter writer = new StreamWriter(path);
+            writer.WriteLine(Settings.Default.AGL);
+            writer.WriteLine(Settings.Default.STR);
+            writer.WriteLine(Settings.Default.VGR);
+            writer.WriteLine(Settings.Default.PER);
+            writer.WriteLine(Settings.Default.INT);
+            writer.WriteLine(Settings.Default.WIL);
+            writer.WriteLine(Settings.Default.CharacterName);
+            writer.WriteLine(Settings.Default.Species);
+            writer.WriteLine(Settings.Default.Career);
+        }
         public static void ShowToast(string message, ToastType type = ToastType.Success)
         {
             const int padding = 20;
